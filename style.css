@@ -134,3 +134,49 @@ body {
     height: 100px;
     border-radius: 40%;
 }
+
+
+#left_eye {
+    position: absolute;
+    display: block;
+    top: 40px;
+    left: 10px;
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+#left_eye::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    background-color: whitesmoke;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+#right_eye::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    background-color: whitesmoke;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+
+#right_eye {
+    position: absolute;
+    display: block;
+    top: 40px;
+    left: 60px;
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
