@@ -1,6 +1,8 @@
 body {
     margin: 0;
     overflow: hidden;
+    background-image: url('https://img.freepik.com/fotos-gratis/as-belas-estrelas-brilhando-no-ceu-noturno_181624-622.jpg?w=740&t=st=1722912266~exp=1722912866~hmac=7246575eb68d3b5724d9dcf022e132e75437044790e6dc24d087140e6f674c04');
+    background-size: cover;
 }
 
 #background {
@@ -13,6 +15,28 @@ body {
     width: 500px;
     height: 600px;
     background-color: #589dec;
+    background: linear-gradient(0deg, rgba(148,128,105,1) 0%, rgba(224,204,180,1) 35% , rgba(151,168,220,1) 35%, rgb(20, 38, 90) 100%);
+    border-radius: 50%;
+}
+
+#suns {
+    position: absolute;
+    left: 60%;
+    top: 15%;
+    width: 100px;
+    height: 100px;
+    background-color: #d2ad80;
+    border-radius: 50%;
+}
+
+#suns::after {
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: #e0a761;
     border-radius: 50%;
 }
 
@@ -31,6 +55,7 @@ body {
     border-top-left-radius: 140px;
     border-top-right-radius: 140px;
     box-shadow: 0 0 0 7px #ccd6db;
+    animation: 3s infinite alternate egg_bounce;
 }
 
 #egg {
@@ -47,6 +72,7 @@ body {
     border-right: 150px solid #ccd6db;
     border-bottom-left-radius: 130px;
     border-bottom-right-radius: 130px;
+    animation: 3s infinite alternate egg_bounce;
 }
 
 #egg::after {
@@ -92,6 +118,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%);
+    animation: 3s infinite alternate egg_bounce;
 }
 
 #head{
@@ -114,6 +141,20 @@ body {
     border-radius: 20% 40% 20% 80%;
 }
 
+#left_ear::after {
+    content: "";
+    position: absolute;
+    display: block;
+    transform: rotate(10deg);
+    left: 5px;
+    top: 10px;
+    background-color: #deb2e0;
+    width: 80px;
+    height: 35px;
+    opacity: 0.6;
+    border-radius: 20% 40% 10% 80%;
+}
+
 #right_ear {
     position: absolute;
     display: block;
@@ -125,6 +166,20 @@ body {
 }
 
 
+#right_ear::after {
+    content: "";
+    position: absolute;
+    display: block;
+    transform: rotate(-8deg);
+    left: 15px;
+    top: 10px;
+    background-color: #deb2e0;
+    width: 80px;
+    height: 35px;
+    opacity: 0.6;
+    border-radius: 40% 20% 80% 00%;
+}
+
 #body {
     position: absolute;
     display: block;
@@ -135,6 +190,32 @@ body {
     border-radius: 40%;
 }
 
+#collar {
+    position: absolute;
+    display: block;
+    left: -60px;
+    top: 30px;
+    transform: rotate(15deg);
+    background-color: #c4beb4;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+
+}
+
+#collar::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 50px;
+    top: -15px;
+    transform: rotate(-30deg);
+    background-color: #c4beb4;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+
+}
 
 #left_eye {
     position: absolute;
@@ -145,20 +226,10 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    animation: 5s infinite blink;
 }
 
 #left_eye::after {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 5px;
-    background-color: whitesmoke;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-}
-
-#right_eye::after {
     content: "";
     position: absolute;
     left: 15px;
@@ -174,9 +245,57 @@ body {
     position: absolute;
     display: block;
     top: 40px;
-    left: 60px;
+    left: 64px;
     background-color: black;
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    animation: 5s infinite blink;
+}
+
+#right_eye::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    background-color: whitesmoke;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+#smile {
+    position: absolute;
+    top: 60px;
+    left: 42px;
+    height: 5px;
+    width: 10px;
+    border-radius: 0 0 20px 20px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+
+}
+
+
+#left_hand {
+    position:absolute;
+    top: calc(50% + 55px);
+    left: 38%;
+    background-color: #98af98;
+    width: 20px;
+    height: 20px;
+    border-radius: 20% 20% 50% 50%;
+    animation: 3s infinite alternate egg_bounce;
+}
+
+#right_hand {
+    position:absolute;
+    top: calc(50% + 55px);
+    left: 60%;
+    background-color: #98af98;
+    width: 20px;
+    height: 20px;
+    border-radius: 20% 20% 50% 50%;
+    animation: 3s infinite alternate egg_bounce;
 }
